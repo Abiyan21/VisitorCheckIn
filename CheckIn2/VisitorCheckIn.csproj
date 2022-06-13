@@ -143,5 +143,10 @@
   <ItemGroup>
     <Folder Include="Model\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FR.jpg" />
+    <Resource Include="Images\EN.jpg" />
+    <Resource Include="Images\DE.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,18 +8,35 @@
         xmlns:vm="clr-namespace:VisitorCheckIn.ViewModel"
         xmlns:properties="clr-namespace:VisitorCheckIn.Properties"
         mc:Ignorable="d"
-        Title="InfoWindow" Height="450" Width="800">
+        Title="InfoWindow" Height="450" Width="1000">
 
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
 
     <Grid>
-        <Menu>
-            <MenuItem Header="Deutsch" Command="{Binding LanguageDE}"></MenuItem>
-            <MenuItem Header="English" Command="{Binding LanguageEN}"></MenuItem>
-            <MenuItem Header="Francais" Command="{Binding LanguageFR}"></MenuItem>
-        </Menu>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="{x:Static resx:Language.lang}">
+                    <MenuItem Header="Deutsch" Command="{Binding LanguageDE}">
+                        <MenuItem.Icon>
+                            <Image Source="../Images/DE.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="English" Command="{Binding LanguageEN}">
+                        <MenuItem.Icon>
+                            <Image Source="../Images/EN.jpg"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Francais" Command="{Binding LanguageFR}">
+                        <MenuItem.Icon>
+                            <Image Source="../Images/FR.jpg"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+
         <Label HorizontalAlignment="Center" FontSize="24" Content="{x:Static resx:Language.title}"/>
     </Grid>
 </Window>

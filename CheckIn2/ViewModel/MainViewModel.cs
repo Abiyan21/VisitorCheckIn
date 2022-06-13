@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using VisitorCheckIn.Utility;
@@ -49,7 +51,15 @@ namespace VisitorCheckIn.ViewModel
 
         private bool CanExecute_LanguageEN()  
         {
-            return true;
+            if (Thread.CurrentThread.CurrentUICulture.Name == "en")
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void Execute_LanguageDE()
@@ -60,7 +70,15 @@ namespace VisitorCheckIn.ViewModel
 
         private bool CanExecute_LanguageDE()
         {
-            return true;
+            if (Thread.CurrentThread.CurrentUICulture.Name == "de")
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void Execute_LanguageFR()
@@ -71,7 +89,15 @@ namespace VisitorCheckIn.ViewModel
 
         private bool CanExecute_LanguageFR()
         {
-            return true;
+            if (Thread.CurrentThread.CurrentUICulture.Name == "fr")
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void changewindow()
@@ -85,9 +111,6 @@ namespace VisitorCheckIn.ViewModel
                     infoW.Show(); 
                 }
             }
-
-            
-
         }
     }
 }
