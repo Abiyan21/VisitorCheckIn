@@ -10,6 +10,7 @@
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,15 +27,15 @@
         <TextBlock Grid.Row="0" Grid.Column="1" TextAlignment="Center" FontSize="38">Salut</TextBlock>
         <TextBlock Grid.Row="0" Grid.Column="0" TextAlignment="Center" FontSize="38">Wilkommen</TextBlock>
 
-        <Button x:Name="germanbtn" Grid.Row="1" Grid.Column="0" Height="200" Margin="10" Command="{Binding LanguageDE}" CommandParameter="{Binding ElementName=germanbtn}">
+        <Button Grid.Row="1" Grid.Column="0" Height="200" Margin="10" Command="{Binding LanguageDE}">
             <Image Source="../Images/DE.png"></Image>
         </Button>
         <TextBlock Grid.Column="0" Grid.Row="2" TextAlignment="Center" FontSize="50">Deutsch</TextBlock>
-        <Button x:Name="frenchbtn" Grid.Row="1" Grid.Column="1" Height="200" Margin="10" Command="{Binding LanguageFR}" CommandParameter="{Binding ElementName=frenchbtn}">
+        <Button Grid.Row="1" Grid.Column="1" Height="200" Margin="10" Command="{Binding LanguageFR}">
             <Image Source="../Images/FR.jpg"></Image>
         </Button>
         <TextBlock Grid.Column="1" Grid.Row="2" TextAlignment="Center" FontSize="50">Francais</TextBlock>
-        <Button x:Name="englishbtn" Grid.Row="1" Grid.Column="2" Height="200" Margin="10" Command="{Binding LanguageEN}" CommandParameter="{Binding ElementName=englishbtn}">
+        <Button Grid.Row="1" Grid.Column="2" Height="200" Margin="10" Command="{Binding LanguageEN}">
             <Image Source="../Images/EN.jpg"></Image>
         </Button>
         <TextBlock Grid.Column="2" Grid.Row="2" TextAlignment="Center" FontSize="50">English</TextBlock>
